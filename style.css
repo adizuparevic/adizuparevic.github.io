@@ -1,0 +1,283 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.men {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  padding: 20px;
+}
+
+.men li {
+  list-style: none;
+}
+
+.men li a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.men li a:hover {
+  text-decoration: double;
+  color: brown;
+  margin-left: 40px;
+  padding: 20px;
+}
+
+.container {
+  padding: 100px;
+  margin: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  opacity: 0;
+  animation: fadeIn 600ms ease-in forwards;
+  width: 200px;
+  height: 200px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.contact-section {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.contact-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid #d0d0d0;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #000;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 150px;
+  border-radius: 20px;
+  resize: none;
+}
+
+.send-btn {
+  padding: 14px 30px;
+  border: none;
+  background: #111;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.send-btn:hover {
+  background: #333;
+}
+
+.swiper {
+  margin-top: 100px;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.swiper img {
+  height: 100px;
+  width: 100px;
+}
+
+.project-name {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.project-name,
+.description,
+.repo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description,
+.repo {
+  font-size: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 4px;
+  text-decoration: none;
+}
+
+.not {
+  font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 100px;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  height: 75px;
+}
+
+.icn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 100px;
+}
+
+
+@keyframes img {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media(max-width: 992px) {
+  .container {
+    padding: 40px;
+    margin: 40px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media(max-width: 768px) {
+  .men {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .men li a {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-title {
+    font-size: 32px;
+  }
+
+  .swiper {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .swiper img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media(max-width: 480px) {
+  .men {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .contact-section {
+    padding: 20px;
+  }
+
+  .send-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .project-name {
+    font-size: 16px;
+  }
+
+  .description,
+  .repo {
+    font-size: 9px;
+  }
+}
